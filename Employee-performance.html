@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Performance Dashboard</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        /* Centering and layout adjustments */
+        .visual-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .visual-section h4 {
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        .visual-section p {
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .visual-section img {
+            max-width: 700px; /* Adjust for larger visuals */
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+
+        .small-visual img {
+            max-width: 400px; /* Smaller visuals */
+            width: 100%;
+            height: auto;
+        }
+        .small-images img {
+            max-width: 300px; /* Standard size for other images */
+            height: auto;
+            margin-top: 10px;
+        }
+
+        .visual-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .visual-grid img {
+            max-width: 700px; /* Larger grid visuals */
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper" class="fade-in">
+        <!-- Header -->
+        <header id="header">
+            <a href="index.html" class="logo">Portfolio</a>
+        </header>
+
+        <!-- Main content for the summary -->
+        <div id="main">
+            <article>
+                <header class="major">
+                    <h2>Employee Performance Dashboard</h2>
+                    <p>Data Cleaning, Modeling, and Visualization using Power BI.</p>
+                </header>
+                <a href="#" class="image main"><img src="Employee Performance.png" alt="Employee Performance Dashboard" /></a>
+
+                <p>
+                    This project provides an overview of employee performance metrics, including department satisfaction levels, project ratings, and top-performing employees. The workflow involved data cleaning in Excel, data modeling, and visualization in Power BI.
+                </p>
+
+                <hr>
+
+                <h3>Steps Taken:</h3>
+                <h4>Data Cleaning:</h4>
+                <ul>
+                    <li>Standardized gender values to "M" and "F".</li>
+                    <li>Formatted dates into the "DD-MMM-YYYY" format.</li>
+                    <li>Ensured consistent percentage formats for productivity and satisfaction rates.</li>
+                </ul>
+
+                <hr>
+
+                <h4>Data Modeling:</h4>
+                <ul>
+                    <li>Created DAX Measures:
+                        <ul>
+                            <li>Average Productivity</li>
+                            <li>Total Projects Completed</li>
+                        </ul>
+                    </li>
+                    <li>Added custom columns for:
+                        <ul>
+                            <li>Feedback Ratings (Bad, Average, Good, Excellent).</li>
+                            <li>Satisfaction Level (Low, Medium, High).</li>
+                            <li>Joining Year from Joining Date.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <hr>
+
+                <h3>Dashboard Design:</h3>
+
+                <div class="visual-section">
+                    <h4>Total Employees</h4>
+                    <p style="text-align: center;">Displays the total number of employees: 200</p>
+                    <div class="small-images">
+                        <img src="images/employee/Employees.png" alt="Overview Visual">
+                    </div>
+                </div>
+               
+                <div class="visual-section">
+                    <h4>Department & Position Slicer</h4>
+                    <p style="text-align: center;">Displays the departments and positions</p>
+                    
+                    <div class="small-visual">
+                        <img src="images/employee/department & positions 1.png" alt="Department & Positions Visual">
+                        <img src="images/employee/department & positions 2.png" alt="Department & Positions Visual">
+                        <img src="images/employee/department & positions 3.png" alt="Department & Positions Visual">
+                    </div>
+                </div>
+
+                <div class="visual-section">
+                    <h4>Gender Distribution for Completed Projects</h4>
+                    <p style="text-align: center;">48% Female, 52% Male, 2291 Total Projects</p>
+                    
+                    <div class="small-visual">
+                        <img src="images/employee/gender.png" alt="Gender Distribution Visual">
+                    </div>
+                </div>
+
+                <div class="visual-section">
+                    <h4>Department Satisfaction Levels</h4>
+                    <p style="text-align: center;">Highlights variations in satisfaction levels across departments</p>
+                   
+                    <img src="images/employee/departments by satisfication level.png" alt="Satisfaction Levels Visual">
+                </div>
+
+                <div class="visual-section">
+                    <h4>Projects by Rating</h4>
+                    <p style="text-align: center;">Distribution of projects based on ratings (Good, Average, Excellent, Bad)</p>
+                  
+                    <img src="images/employee/projects by rating.png" alt="Projects by Rating Visual">
+                </div>
+
+                <div class="visual-section">
+                    <h4>Top 5 Employees</h4>
+                    <p style="text-align: center;">Highlights the top-performing employees based on productivity</p>
+                    
+                    <div class="visual-grid">
+                        <img src="images/employee/top 5 emp by rank 1.png" alt="Top Employees Visual">
+                        <img src="images/employee/top 5 emp by rank 2.png" alt="Top Employees Visual">
+                        <img src="images/employee/top 5 emp by rank 3.png" alt="Top Employees Visual">
+                    </div>
+                </div>
+
+                <hr>
+
+                <h3>Key Insights:</h3>
+                <ul>
+                    <li>High satisfaction levels in the IT department.</li>
+                    <li>Employee performance and satisfaction vary significantly across departments.</li>
+                    <li>Top performers completed up to 19 projects with high satisfaction rates.</li>
+                </ul>
+
+                <ul class="actions special">
+                    <li><a href="https://github.com/NesmaAlkadi/Employee-performance-dahsboard" class="button">View Full Project</a></li>
+                    <li><a href="index.html" class="button">Back to Projects</a></li>
+                </ul>
+            </article>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <section class="split contact">
+                <section>
+                    <h3>Email</h3>
+                    <p><a href="#">nesmaemad309@gmail.com</a></p>
+                </section>
+            </section>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

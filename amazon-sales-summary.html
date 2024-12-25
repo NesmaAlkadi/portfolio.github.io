@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Sales Project Summary</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        /* Inline styles for organizing images */
+        .image-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Space between images */
+            justify-content: center; /* Center-align images */
+        }
+        .visual-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .visual-section h4 {
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        .visual-section p {
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .visual-section img {
+            max-width: 700px; /* Adjust for larger visuals */
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+
+        .small-visual img {
+            max-width: 400px; /* Smaller visuals */
+            width: 100%;
+            height: auto;
+        }
+
+        .visual-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .visual-grid img {
+            max-width: 700px; /* Larger grid visuals */
+            width: 100%;
+            height: auto;
+        }
+        .image-grid img {
+            max-width: 400px; /* Larger size for specified sections */
+            height: auto; /* Maintain aspect ratio */
+            margin-top: 10px;
+        }
+        .small-images img {
+            max-width: 300px; /* Standard size for other images */
+            height: auto;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper" class="fade-in">
+        <!-- Header -->
+        <header id="header">
+            <a href="index.html" class="logo">Portfolio</a>
+        </header>
+
+        <!-- Main content for the summary -->
+        <div id="main">
+            <article>
+                <header class="major">
+                    <h2>Amazon Sales Project</h2>
+                    <p>Data Cleaning, Modeling, and Visualization using Power BI.</p>
+                </header>
+                <a href="#" class="image main"><img src="Amazon Sales.png" alt="Amazon Sales Dashboard" /></a>
+                
+                <p>
+                    This project involved analyzing Amazon sales data in India to uncover insights into sales trends, product performance, and customer feedback. The entire workflow, from data cleaning to visualization, was conducted in Power BI.
+                </p>
+
+                <hr>
+
+                <h3>Steps Taken:</h3>
+                <h4>Data Cleaning:</h4>
+                <ul>
+                    <li>Removed unnecessary rows and columns, reducing the dataset from 1,466 rows to 1,186 rows.</li>
+                    <li>Standardized price columns by removing currency symbols and converting them to decimal format.</li>
+                    <li>Split detailed columns into meaningful categories:
+                        <ul>
+                            <li>Product Name split into Brand and Product Name.</li>
+                            <li>Category split into Main Category and subcategories.</li>
+                        </ul>
+                    </li>
+                    <li>Simplified review data by extracting key parts of reviews (titles and content).</li>
+                    <li>Removed irrelevant data like image and product links.</li>
+                </ul>
+
+                <hr>
+
+                <h4>Data Modeling:</h4>
+                <ul>
+                    <li>Created DAX Measures to calculate:
+                        <ul>
+                            <li>Total Brands</li>
+                            <li>Total Products</li>
+                            <li>Total Revenue</li>
+                            <li>Total Reviews</li>
+                            <li>Average Discount Percentage</li>
+                            <li>Average Rating</li>
+                        </ul>
+                    </li>
+                    <li>Added custom columns for deeper insights:
+                        <ul>
+                            <li>Rating Label (e.g., "Bad", "Average", "Good", "Excellent").</li>
+                            <li>Rating Bin for grouping ratings (e.g., 0–1, 1–2, etc.).</li>
+                            <li>Discount Range for categorizing discount percentages.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <hr>
+
+                <h4>Dashboard Design:</h4>
+                <ul>
+                    <li>
+                        <div class="visual-section">
+                        <b>Total Products:</b>
+                        <p style="text-align: center;"> 1,186</p>
+                        <div class="small-images">
+                            <img src="images/total_projects.png" alt="Overview Visual">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="visual-section">
+                        <b>Total Brands:</b> 
+                        <p style="text-align: center;"> 382</p>
+                        <div class="small-images">
+                            <img src="images/total_brands.png" alt="Overview Visual">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="visual-section">
+                        <b>Average Rating:</b> 
+                        <p style="text-align: center;"> 4</p>
+                        <div class="small-images">
+                            <img src="images/average_rating.png" alt="Overview Visual">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="visual-section">
+                        <b>Categories slicer:</b>
+                        <p style="text-align: center;"> Displays the main category, subcategory 1, subcategory 2, and subcategory 3</p>
+                        <div class="small-images">
+                            <img src="images/slicer categories 1.png" alt="Top Brands Visual">
+                            <img src="images/slicer categories 2.png" alt="Top Brands Visual">
+                            <img src="images/slicer categories 3.png" alt="Top Brands Visual">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="visual-section">
+                        <b>Top 5 Brands by Average Rating:</b> 
+                        <p style="text-align: center;"> Highlights the highest-rated brands based on customer reviews</p>
+                        <img src="images/Top 5 Brands by Average Rating.png" alt="Top Brands Visual">
+                    </li>
+                    <li>
+                        <div class="visual-section">
+                        <b>Sum of Discounted Prices by Discount Range:</b> 
+                        <p style="text-align: center;"> Displays the distribution of products based on discount percentages</p>
+                        <div class="image-grid">
+                            <img src="images/Sum of Discounted_Price by Discount Range 1.png" alt="Discount Range Visual">
+                            <img src="images/Sum of Discounted_Price by Discount Range 2.png" alt="Discount Range Visual">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="visual-section">
+                            <b>Total Revenue by Main Category:</b> 
+                            <p style="text-align: center;"> Electronics and Home & Kitchen generate the most revenue</p>
+                        
+                        <img src="images/total revenue by main category.png" alt="Revenue Analysis Visual">
+                    </li>
+                    <li>
+                        <div class="visual-section">
+                        <b>Rating Distribution:</b> 
+                        <p style="text-align: center;"> Displays the number of products in different rating ranges (e.g., 0–1, 1–2) across categories</p>
+                        <div class="image-grid">
+                            <img src="images/rating bin for main category 1.png" alt="Rating Distribution Visual">
+                            <img src="images/rating bin for main category  2.png" alt="Rating Distribution Visual">
+                            <img src="images/rating bin for main category 3.png" alt="Rating Distribution Visual">
+                            <img src="images/rating bin for main category 4.png" alt="Rating Distribution Visual">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="visual-section">
+                        <b>Detailed Products:</b> 
+                        <p style="text-align: center;"> Highlights specific products along with their brands, descriptions, and other details</p>
+                        <div class="image-grid">
+                            <img src="images/detailed table 1.png" alt="Detailed Products Visual">
+                            <img src="images/detailed table 2.png" alt="Detailed Products Visual">
+                        </div>
+                    </li>
+                </ul>
+
+                <hr>
+
+                <h3>Key Insights:</h3>
+                <ul>
+                    <li>Identified top-performing brands and products.</li>
+                    <li>Explored the impact of discounts on revenue.</li>
+                    <li>Analyzed customer satisfaction through ratings and reviews.</li>
+                </ul>
+
+                <ul class="actions special">
+                    <li><a href="https://github.com/NesmaAlkadi/Amazon-Sales-Dashboard" class="button">View Full Project</a></li>
+                    <li><a href="index.html" class="button">Back to Projects</a></li>
+                </ul>
+            </article>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <section class="split contact">
+                <section>
+                    <h3>Email</h3>
+                    <p><a href="#">nesmaemad309@gmail.com</a></p>
+                </section>
+            </section>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arabic Sign Language Recognition</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        /* Centering and layout adjustments */
+        .visual-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .visual-section h4 {
+            margin-bottom: 10px;
+            font-size: 1.8em; /* Increased font size */
+        }
+
+        .visual-section p {
+            margin-bottom: 20px;
+            font-size: 1.3em; /* Increased font size */
+            color: #555;
+        }
+
+        .visual-section img, 
+        img {
+            display: block;
+            max-width: 600px; /* Increased size for images */
+            width: 100%;
+            height: auto;
+            margin: 10px auto; /* Center the image */
+        }
+
+        .small-visual img {
+            max-width: 400px; /* Adjusted smaller visuals */
+            width: 100%;
+            height: auto;
+        }
+
+        .small-images img {
+            max-width: 300px; /* Adjusted size for standard images */
+            height: auto;
+            margin: 10px auto; /* Center the image */
+        }
+
+        .visual-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .visual-grid img {
+            max-width: 600px; /* Increased grid visuals */
+            width: 100%;
+            height: auto;
+        }
+
+        /* Adjust main article font */
+        #main article p {
+            font-size: 1.3em;
+        }
+
+        #main article ul {
+            font-size: 1.3em; /* Enlarged list font */
+        }
+
+        .training-config ul {
+            font-size: 1.1em; /* Reduced size for training config details */
+            line-height: 1.5; /* Better spacing */
+        }
+
+        /* Increase size for section headers */
+        h3 {
+            font-size: 2em; /* Make the section title larger */
+            margin-bottom: 20px; /* Add space below */
+        }
+
+        h4 {
+            font-size: 1.8em; /* Increased size for sub-headings */
+            margin-bottom: 10px; /* Adjust space below the subheading */
+            font-weight: bold; /* Make it bold */
+        }
+
+        /* Add specific style for 'PROJECT WORKFLOW' and 'DATASET PREPARATION' */
+        h3.project-workflow, h4.dataset-preparation {
+            font-size: 2.2em; /* Larger font for these headers */
+            color: #333; /* Optional: Change color */
+            text-transform: uppercase; /* Optional: Make them uppercase */
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper" class="fade-in">
+        <!-- Header -->
+        <header id="header">
+            <a href="index.html" class="logo">Portfolio</a>
+        </header>
+
+        <!-- Main content for the summary -->
+        <div id="main">
+            <article>
+                <header class="major">
+                    <h2>Arabic Alphabet Sign Language Recognition</h2>
+                    <p>Object detection using YOLOv5s using Roboflow.</p>
+                </header>
+
+                <p>
+                    This project involves building a YOLOv5s-based model using Roboflow to recognize Arabic alphabet sign language from 11,000 images spread across 28 classes. The images include complex backgrounds, and data augmentation techniques were applied to enhance model robustness.
+                </p>
+                <img src="images/deep learning/Sample dataset.png" alt="Sample Dataset" />
+
+                <hr>
+
+                <h3 class="project-workflow">Project Workflow:</h3>
+                <h4 class="dataset-preparation">Dataset Preparation:</h4>
+                <ul>
+                    <li>Images and labels were uploaded to Roboflow for annotation and pre-processing.</li>
+                    <li>Augmentation included rotation (-17° to +17°) and brightness adjustments (-2 to +2).</li>
+                    <li>The dataset was exported in a YOLOv5-compatible format.</li>
+                    <img src="images/deep learning/roboflow.png" alt="Roboflow" />
+                </ul>
+
+                <h4>Model Details:</h4>
+                <ul>
+                    <li>Algorithm: YOLOv5s (small, lightweight for real-time applications).</li>
+                    <li>Architecture: 29 layers including convolutional layers, and multi-scale detection heads.</li>
+                    <li class="training-config">Training Configuration:
+                        <ul>
+                            <li>Image size: 416x416 pixels</li>
+                            <li>Batch size: 16</li>
+                            <li>Epochs: 60</li>
+                            <li>Data split: 70% training, 10% validation, 10% testing</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <hr>
+
+                <h3>Performance Metrics:</h3>
+                <ul>
+                    <li>Accuracy: 98%</li>
+                    <li>Recall: 99%</li>
+                    <li>Precision: 98%</li>
+                    <img src="images/deep learning/Alphabet accuracy 1.png" alt="Accuracy Per Letter" />
+                    <img src="images/deep learning/Alphabet accuracy 2.png" alt="Accuracy Per Letter" />
+                </ul>
+
+                <div class="visual-section">
+                    <h4>YOLOv5s Model Output</h4>
+                    <img src="images/deep learning/Sample output.jpg" alt="YOLOv5s Model Output">
+                </div>
+
+                <hr>
+
+                <h3>Key Highlights:</h3>
+                <ul>
+                    <li>Efficient real-time recognition of Arabic alphabet sign language.</li>
+                    <li>Robustness achieved through advanced data augmentation and pre-processing on Roboflow.</li>
+                    <li>Potential applications in assistive technologies for communication.</li>
+                </ul>
+
+                <ul class="actions special">
+                    <li><a href="https://github.com/NesmaAlkadi/Deep-learning-" class="button">View Full Project</a></li>
+                    <li><a href="index.html" class="button">Back to Projects</a></li>
+                </ul>
+            </article>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <section class="split contact">
+                <section>
+                    <h3>Email</h3>
+                    <p><a href="#">nesmaemad309@gmail.com</a></p>
+                </section>
+            </section>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
